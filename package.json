@@ -1,6 +1,7 @@
 {
   "name": "restriccion-vehicular-lapaz",
   "version": "0.0.0",
+  "homepage": "https://vicovillca.github.io/restriccion-vehicular-lapaz",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

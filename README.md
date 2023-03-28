@@ -7,3 +7,5 @@ https://www.npmjs.com/package/@asymmetrik/ngx-leaflet
 
 https://www.ultimateakash.com/blog-details/Ii1DQGAKYAo=/How-To-Integrate-Leaflet-Maps-in-Angular-2022
 
+# subir a produccion
+npm run deploy
