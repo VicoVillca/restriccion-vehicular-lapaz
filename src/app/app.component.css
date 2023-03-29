@@ -4,16 +4,31 @@
   width: 100%;
   height: 100%;
 }
-.maguia{
-  border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 11px;
-    position: absolute;
-    line-height: normal;
-    padding: 52px 0 3px 8px;
-    bottom: 0;
-    left: 0;
-    width: calc(100% - 8px);
-    background-image: linear-gradient(transparent,transparent 20%,rgba(0,0,0,0.1) 40%,rgba(0,0,0,0.4) 60%,rgba(0,0,0,0.6) 80%,rgba(0,0,0,0.6));
+.numero{
+  background-color: cornflowerblue;
+  color: azure;
+  font-size: 2.0em;
+  border-radius: 20px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.descrip{
+  font-size: 12px;
+}
+.colado{
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  border: 3px solid cornflowerblue;
+
+}
+
+#inner {
+
+}
+#outer {
+  width:100%;
+  display: flex;
+  justify-content: center;
 }

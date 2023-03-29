@@ -1,7 +1,6 @@
 {
   "name": "restriccion-vehicular-lapaz",
   "version": "0.0.0",
-  "homepage": "https://vicovillca.github.io/restriccion-vehicular-lapaz",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,6 +22,7 @@
     "@asymmetrik/ngx-leaflet": "^15.0.1",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",
+    "angular-cli-ghpages": "^1.0.5",
     "bootstrap": "^5.2.0",
     "leaflet": "^1.9.3",
     "rxjs": "~7.5.0",

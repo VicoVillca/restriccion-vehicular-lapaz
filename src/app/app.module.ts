@@ -8,11 +8,13 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { RestriccionService } from './restriccion.service';
 import { AppBarComponent } from './app-bar/app-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppBarComponent
+    AppBarComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
