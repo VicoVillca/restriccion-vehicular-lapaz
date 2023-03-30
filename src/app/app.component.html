@@ -1,21 +1,7 @@
+<!-- Navbar -->
 <app-bar></app-bar>
-<div id="outer">
-  <div class="m-2 colado" id="inner" >
-    <div class="form-control">
-      <div class="row align-items-start">
-        <div class="col-8">
-          <p class="fw-bolder" >Lunes 27</p>
-          <p class="fw-lighter descrip" style="margin: -2.5% 0">
-            Restriccion de placas que terminan en:
-          </p>
-        </div>
-        <div class="col-2 numero">0</div>
-        <div class="col-2 numero">5</div>
-      </div>
-    </div>
-  </div>
 
-</div>
+<!-- Navbar -->
 
 <div
   class="flex-content map-container"
@@ -24,3 +10,41 @@
   [leafletOptions]="options"
   (leafletMapReady)="onMapReady($event)"
 ></div>
+
+<!-- Footer -->
+<footer  class=" text-center text-white fixed-bottom">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0" style="max-width:400px ;">
+    <!-- Section: Social media -->
+    <section class="mb-4 colado">
+      <!-- Facebook -->
+      <div class="form-control">
+        <div class="row align-items-start">
+          <div class="col-8">
+            <p class="fw-bolder mensaje" >Lunes 27 <br><small class="fw-lighter descrip">Restricción  de placas que terminan en:</small></p>
+          </div>
+          <div class="col-2 numero">0</div>
+          <div class="col-2 numero">5</div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+
+  <div
+    class="bg-primary  text-center p-1"
+    style="background-color: rgba(255, 255, 255, 0.2)"
+
+  >
+  <span class="copyright">
+    © 2023, creado con <i class="fa fa-heart heart"></i> por Abraham villca
+  </span>
+
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
