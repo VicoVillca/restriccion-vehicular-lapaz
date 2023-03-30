@@ -12,20 +12,36 @@
 ></div>
 
 <!-- Footer -->
-<footer  class=" text-center text-white fixed-bottom">
+<footer class="text-center text-white fixed-bottom">
   <!-- Grid container -->
-  <div class="container p-4 pb-0" style="max-width:400px ;">
+  <div class="container p-4 pb-0" style="max-width: 400px">
     <!-- Section: Social media -->
     <section class="mb-4 colado">
       <!-- Facebook -->
       <div class="form-control">
-        <div class="row align-items-start">
+        <div
+          class="row align-items-start"
+          *ngIf="dia !== 'Domingo' && dia !== 'Sábado'; else error"
+        >
           <div class="col-8">
-            <p class="fw-bolder mensaje" >Lunes 27 <br><small class="fw-lighter descrip">Restricción  de placas que terminan en:</small></p>
+            <p class="fw-bolder mensaje">
+              {{ dia }} <br /><small class="fw-lighter descrip"
+                >Restricción de placas que terminan en:</small
+              >
+            </p>
           </div>
-          <div class="col-2 numero">0</div>
-          <div class="col-2 numero">5</div>
+          <div class="col-2 numero">{{ r1 }}</div>
+          <div class="col-2 numero">{{ r2 }}</div>
         </div>
+        <ng-template #error>
+          <div class="col-12">
+            <p class="fw-bolder mensaje">
+              {{ dia }} <br /><small class="fw-lighter descrip"
+                >Hoy no hay restricciones vehicular</small
+              >
+            </p>
+          </div>
+        </ng-template>
       </div>
     </section>
     <!-- Section: Social media -->
@@ -36,14 +52,12 @@
   <!-- Copyright -->
 
   <div
-    class="bg-primary  text-center p-1"
+    class="bg-primary text-center p-1"
     style="background-color: rgba(255, 255, 255, 0.2)"
-
   >
-  <span class="copyright">
-    © 2023, creado con <i class="fa fa-heart heart"></i> por Abraham villca
-  </span>
-
+    <span class="copyright">
+      © 2023, creado con <i class="fa fa-heart heart"></i> por Abraham villca
+    </span>
   </div>
   <!-- Copyright -->
 </footer>

@@ -31,33 +31,33 @@
 }
 @keyframes heathing {
   0% {
-      -webkit-transform: scale(.75);
-      transform: scale(.75)
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
 
   20% {
-      -webkit-transform: scale(1);
-      transform: scale(1)
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 
   40% {
-      -webkit-transform: scale(.75);
-      transform: scale(.75)
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
 
   60% {
-      -webkit-transform: scale(1);
-      transform: scale(1)
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 
   80% {
-      -webkit-transform: scale(.75);
-      transform: scale(.75)
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
 
   to {
-      -webkit-transform: scale(.75);
-      transform: scale(.75)
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
 }
 .heart {

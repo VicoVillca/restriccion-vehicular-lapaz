@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Icon, Map, Marker, Polygon, tileLayer } from 'leaflet';
 Icon.Default.imagePath = 'assets/';
 import { RestriccionService } from './restriccion.service';
@@ -8,7 +8,10 @@ import { RestriccionService } from './restriccion.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  dia: string = 'Lunes';
+  r1: number = 0;
+  r2: number = 0;
   map!: Map;
   puntos: { lat: number; lng: number }[] = [];
   options = {
@@ -22,6 +25,30 @@ export class AppComponent {
     center: { lat: -16.505537926777112, lng: -68.13373365668494 },
   };
   constructor(private restriccion: RestriccionService) {}
+  ngOnInit(): void {
+    var d = new Date(); // Por ejemplo 1
+    var n = this.getDia(d.getDay());
+    //var n = this.getDia(6);
+    this.dia = n;
+  }
+  getDia(index: any) {
+    var dia = new Array(7);
+    dia[0] = 'Domingo';
+    dia[1] = 'Lunes'; //1 2
+    dia[2] = 'Martes'; //3 4
+    dia[3] = 'Miércoles'; // 5 6
+    dia[4] = 'Jueves'; //7 8
+    dia[5] = 'Viernes'; //9 0
+    dia[6] = 'Sábado';
+
+    if (index > 0 && index < 6) {
+      //colocamos los dias
+      this.r1 = (index * 2 - 1) % 10;
+      this.r2 = (index * 2) % 10;
+    }
+    return dia[index];
+  }
+
   initMarkers() {
     for (let index = 0; index < this.puntos.length; index++) {
       const data = this.puntos[index];
@@ -53,39 +80,3 @@ export class AppComponent {
     this.initpolyline();
   }
 }
-
-/**
- https://vicovillca.github.io/restriccion-vehicular-lapaz/
- <div  >
-  <img src="https://px.cdn.reduno.com.bo/reduno/032023/1679670871797.jpg" class="img-fluid" alt="sd">
-</div>
-<app-bar></app-bar>
-<div
-  class="flex-content map-container"
-  style="height: 80vh"
-  leaflet
-  [leafletOptions]="options"
-  (leafletMapReady)="onMapReady($event)"
-></div>
-
-<div id="outer" >
-  <div class="m-2 colado" id="inner" >
-    <div class="form-control">
-      <div class="row align-items-start">
-        <div class="col-8">
-          <p class="fw-bolder" >Lunes 27</p>
-          <p class="fw-lighter descrip" style="margin: -2.5% 0">
-            Restriccion de placas que terminan en:
-          </p>
-        </div>
-        <div class="col-2 numero">0</div>
-        <div class="col-2 numero">5</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
- */
